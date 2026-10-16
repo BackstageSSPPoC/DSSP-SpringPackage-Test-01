@@ -25,7 +25,7 @@ public class TaskService {
     }
 
     public Task add(Task task) {
-        int id = idSequence.incrementAndGet();
+        long id = idSequence.incrementAndGet();
         task.setId(id);
         tasks.put(id, task);
         return task;
